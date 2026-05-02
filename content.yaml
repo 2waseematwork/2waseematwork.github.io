@@ -214,7 +214,7 @@ experience:
   jobs:
     - company: Perficient
       role: Senior Technical Architect
-      dates: Jan 2023 — Present
+      dates: Nov 2021 — Present
       location: Remote (Broomfield, CO)
       client: Enterprise Mobility (Alamo, National, Enterprise Rent-A-Car)
       prior_role: Technical Architect (Nov 2021 — Jan 2023)
@@ -228,7 +228,7 @@ experience:
 
     - company: Peraton (formerly Hewlett-Packard)
       role: Technology Consultant
-      dates: 2010 — Nov 2021
+      dates: May 2010 — Nov 2021
       location: Westminster, CO
       client: County of San Diego, CDCR, multi-state
       bullets:
@@ -240,7 +240,7 @@ experience:
 
     - company: DFA — State of Arkansas
       role: Senior Consultant
-      dates: Apr 2008 — May 2010
+      dates: Feb 2008 — May 2010
       location: Little Rock, AR
       bullets:
         - Designed banking-check & document-processing solutions under strict daily SLAs for Treasury and bank deadlines
@@ -844,10 +844,10 @@ certifications:
 
   items:
     - { name: 'Adobe AEM 6 Business Practitioner',                       issuer: Adobe,       year: 'Sep 2025' }
-    - { name: 'Architecting Applications for the Real World in .NET',    issuer: Pluralsight, year: ''         }
+    - { name: 'Architecting Applications for the Real World in .NET',    issuer: Pluralsight, year: 'Mar 2017'         }
     - { name: 'Web Developer Bootcamp',                                  issuer: Udemy,       year: 'Feb 2016' }
     - { name: 'CompTIA CDIA',                                            issuer: CompTIA,     year: 'Sep 2012' }
-    - { name: 'Shaping up with Angular.js',                              issuer: Code School, year: ''         }
+    - { name: 'Shaping up with Angular.js',                              issuer: Code School, year: 'May 2011'         }
 
 # -----------------------------------------------------------------------------
 testimonials:
