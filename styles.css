@@ -115,9 +115,32 @@ html, body {
 @container px (max-width: 760px) { .px-nav-inner { padding: 12px 20px; } }
 @container px (max-width: 420px) { .px-nav-inner { padding: 12px 16px; } }
 
-.px-logo { font-family: var(--display); font-size: 20px; letter-spacing: -0.01em; }
+.px-logo { font-family: var(--display); font-size: 20px; letter-spacing: -0.01em; text-decoration: none; color: inherit; }
 .px-logo b { font-weight: 600; }
 .px-logo i { color: var(--pop); font-style: italic; }
+
+.px-btt {
+  position: fixed;
+  bottom: 24px;
+  right: 20px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--ink);
+  color: white;
+  border: none;
+  font-size: 18px;
+  line-height: 1;
+  cursor: pointer;
+  z-index: 25;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 12px rgba(0,0,0,.22);
+  transition: background .2s, transform .2s;
+}
+.px-btt[hidden] { display: none; }
+.px-btt:hover { background: var(--accent); transform: translateY(-2px); }
 
 .px-navlinks { display: flex; gap: 22px; font-size: 13px; }
 .px-navlinks a {
@@ -141,6 +164,70 @@ html, body {
 .px-cta:hover { background: var(--ink); }
 
 @container px (max-width: 760px) { .px-navlinks { display: none; } }
+
+/* Hamburger button — hidden on desktop */
+.px-burger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 40px;
+  height: 40px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  border-radius: 8px;
+  transition: background .15s;
+  flex-shrink: 0;
+}
+.px-burger:hover { background: var(--paper); }
+.px-burger span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--ink);
+  border-radius: 2px;
+  transition: transform .22s ease, opacity .18s ease;
+  transform-origin: center;
+}
+/* Animate to X when open */
+.px-burger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.px-burger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+.px-burger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* Mobile nav drawer */
+.px-nav-drawer {
+  display: none;
+  flex-direction: column;
+  gap: 0;
+  padding: 8px 0 16px;
+  border-top: 1px solid var(--line);
+  background: rgba(251, 250, 246, .97);
+}
+.px-nav-drawer a:not(.px-cta) {
+  display: block;
+  padding: 13px 20px;
+  font-size: 15px;
+  color: var(--inkSoft);
+  text-decoration: none;
+  transition: color .15s, background .15s;
+}
+.px-nav-drawer a:not(.px-cta):hover { color: var(--accent); background: var(--paper); }
+.px-nav-drawer .px-cta {
+  margin: 10px 20px 0;
+  display: block;
+  text-align: center;
+  border-radius: 999px;
+}
+
+@container px (max-width: 760px) {
+  .px-burger { display: flex; }
+  .px-nav-drawer.open { display: flex; }
+  /* Hide desktop CTA on mobile since drawer has its own */
+  .px-nav-inner > .px-cta { display: none; }
+}
 
 /* =============================================================================
    HERO

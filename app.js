@@ -70,12 +70,22 @@
     const links = (D.nav?.links || [])
       .map(l => `<a href="${safeHref(l.href)}">${esc(l.label)}</a>`)
       .join('');
+    const mobileLinks = (D.nav?.links || [])
+      .map(l => `<a href="${safeHref(l.href)}">${esc(l.label)}</a>`)
+      .join('');
     const cta = D.nav?.cta || { label: 'Hire me', href: '#contact' };
     return `
-      <nav class="px-nav">
+      <nav class="px-nav" id="px-nav">
         <div class="px-nav-inner">
-          <div class="px-logo"><b>${esc(D.profile.name.split(' ')[0])}</b> <i>${esc(D.profile.name.split(' ').slice(1).join(' '))}</i></div>
+          <a href="#" class="px-logo" aria-label="Back to top"><b>${esc(D.profile.name.split(' ')[0])}</b> <i>${esc(D.profile.name.split(' ').slice(1).join(' '))}</i></a>
           <div class="px-navlinks">${links}</div>
+          <a class="px-cta" href="${safeHref(cta.href)}">${esc(cta.label)}</a>
+          <button class="px-burger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="px-nav-drawer">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+        <div class="px-nav-drawer" id="px-nav-drawer" aria-hidden="true">
+          ${mobileLinks}
           <a class="px-cta" href="${safeHref(cta.href)}">${esc(cta.label)}</a>
         </div>
       </nav>`;
@@ -499,6 +509,7 @@
       renderContact(D),
       '</main>',
       renderFooter(D),
+      '<button class="px-btt" aria-label="Back to top" hidden>↑</button>',
     ].join('\n');
 
     wireEvents(D);
@@ -513,6 +524,37 @@
   let prevBodyOverflow = '';  // for scroll lock
 
   function wireEvents(D) {
+    // Back to top button
+    const btt = root.querySelector('.px-btt');
+    if (btt) {
+      const onScroll = () => { btt.hidden = window.scrollY < 320; };
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+      btt.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+    }
+
+    // Hamburger / mobile nav drawer
+    const burger = root.querySelector('.px-burger');
+    const drawer = root.querySelector('.px-nav-drawer');
+    if (burger && drawer) {
+      burger.addEventListener('click', () => {
+        const open = burger.getAttribute('aria-expanded') === 'true';
+        burger.setAttribute('aria-expanded', String(!open));
+        burger.classList.toggle('open', !open);
+        drawer.classList.toggle('open', !open);
+        drawer.setAttribute('aria-hidden', String(open));
+      });
+      // Close drawer when a link inside it is clicked
+      drawer.querySelectorAll('a').forEach(a => {
+        a.addEventListener('click', () => {
+          burger.setAttribute('aria-expanded', 'false');
+          burger.classList.remove('open');
+          drawer.classList.remove('open');
+          drawer.setAttribute('aria-hidden', 'true');
+        });
+      });
+    }
+
     // Filter pills
     const pf = root.querySelector('.px-pf');
     if (pf) {
@@ -625,9 +667,19 @@
     });
   }
 
-  // ESC closes modals (capture, not bound per-modal)
+  // ESC closes modals and mobile nav drawer
   document.addEventListener('keydown', e => {
-    if (e.key === 'Escape') closeModal();
+    if (e.key === 'Escape') {
+      closeModal();
+      const burger = root.querySelector('.px-burger');
+      const drawer = root.querySelector('.px-nav-drawer');
+      if (burger && drawer) {
+        burger.setAttribute('aria-expanded', 'false');
+        burger.classList.remove('open');
+        drawer.classList.remove('open');
+        drawer.setAttribute('aria-hidden', 'true');
+      }
+    }
   });
 
   // ===========================================================================
