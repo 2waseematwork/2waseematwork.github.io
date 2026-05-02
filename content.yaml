@@ -1,0 +1,910 @@
+# =============================================================================
+# Portfolio content — edit this file to update the site. No HTML/CSS needed.
+# =============================================================================
+# Quick rules for editing:
+#   • Indentation matters — use 2 spaces (NEVER tabs).
+#   • Lines starting with "#" are comments and are ignored.
+#   • For multi-line text use "|" (keeps line breaks) or ">" (folds into paragraph).
+#   • Inside any headline you can italicize words:
+#       *word*    → italic in accent color (emerald)
+#       **word**  → italic in pop color (magenta)
+#   • Save the file and refresh the browser. No build step.
+# =============================================================================
+
+profile:
+  name: Waseem Mohammed
+  role: Senior Technical Architect
+  tagline: '{years}+ years architecting enterprise solutions. Now guiding AI to ship them.'
+  career_start_year: 2007  # increments the years count every Jan 1
+  location: Thornton, Colorado
+  email:
+  linkedin: https://www.linkedin.com/in/linkwaseem
+  languages: [English]
+  availability: Available remote, US
+
+  # Optional: path to a headshot. Leave empty to use the SVG placeholder.
+  # Cropped to a circle, fills the avatar disk.
+  avatar: avatar.webp
+
+# -----------------------------------------------------------------------------
+# Top sticky navigation
+# -----------------------------------------------------------------------------
+nav:
+  links:
+    - { label: About,        href: '#about'        }
+    - { label: AI Mind,      href: '#ai'           }
+    - { label: Skills,       href: '#skills'       }
+    - { label: Work,         href: '#work'         }
+    - { label: Projects,     href: '#projects'     }
+    - { label: Testimonials, href: '#testimonials' }
+  cta: { label: Contact, href: '#contact' }
+
+# -----------------------------------------------------------------------------
+# Hero (top of page)
+# -----------------------------------------------------------------------------
+hero:
+  # Optional little chip above the headline (e.g. "Open for engagements · 2026").
+  # Leave empty to hide the chip entirely.
+  tag:
+
+  # Use *systems* (italic accent) and **AI** (italic pop) — newlines preserved
+  headline: |
+    Architect of *systems*,
+    guide to the **AI**
+    that ships them.
+
+  sub: >
+    Senior Technical Architect · {years}+ years across Adobe Experience Manager,
+    Azure, AWS, and the legacy stacks where AI needs an experienced hand. Based in Thornton, Colorado.
+
+  primary_cta:   { label: 'See selected work', href: '#projects' }
+  secondary_cta: { label: 'LinkedIn ↗',        href: 'https://www.linkedin.com/in/linkwaseem' }
+
+  # Floating chips on the avatar disk
+  chips:
+    - { label: 'Thornton, Colorado', style: outline }
+    - { label: '{years}+ years',         style: accent  }
+    - { label: "Let's talk",            style: pop     }
+
+# -----------------------------------------------------------------------------
+# Marquee — scrolling words below the hero, separated by ✦
+# -----------------------------------------------------------------------------
+marquee:
+  - Adobe Experience Manager
+  - Azure Functions
+  - AWS Lambda
+  - AI-guided engineering
+  - '{years}+ years shipping'
+  - Enterprise architecture
+
+# -----------------------------------------------------------------------------
+about:
+  eyebrow: 01 — About
+  headline: |
+    Senior, by *scars*.
+    Hands-on, by **choice**.
+
+  paragraph_1: >
+    Experienced IT professional with {years}+ years of proven track record delivering
+    high quality solutions with focus on solution design and development,
+    overseeing all aspects of software development life cycle, managing teams,
+    coaching, learning, providing support and pursuing business opportunities.
+
+  paragraph_2: >
+    Senior Technical Architect at Perficient with deep specialization in Adobe
+    Experience Manager, cloud platforms, and document-capture systems. From SOMS
+    (a national-award-winning CDCR project that digitized 250M images of
+    50-year paper records) to CheeriOS (a non-breaking-release platform serving
+    Enterprise Mobility's global brand sites) — I lead teams, design systems
+    end-to-end, and translate ambiguous business needs into shippable
+    architecture.
+
+  # 4 stat tiles. Backgrounds rotate: accent, pop, paper, ink.
+  # {years}    → auto-computed from career_start_year every Jan 1
+  # {projects} → auto-counted from projects.items
+  # {ai_agents}→ auto-counted from ai_mind.proof
+  stats:
+    - { value: '{years}+',     label: 'Years shipping'        }
+    - { value: '250M',         label: 'Images migrated · SOMS'}
+    - { value: '{projects}',   label: 'Projects shipped'      }
+    - { value: '{ai_agents}',  label: 'AI agents in prod'     }
+
+# -----------------------------------------------------------------------------
+ai_mind:
+  eyebrow: 02 — AI + Engineering Mind
+  headline: |
+    Vibe coding doesn't ship.
+    *Engineering minds* do.
+
+  paragraph_1: >
+    AI agents are extraordinary collaborators — but they're not architects.
+    They don't know which integration will buckle under load, which auth flow
+    leaks data, or which caching strategy will silently corrupt your CDN. That
+    intuition comes from {years} years of shipping real systems for real users.
+
+  paragraph_2: >
+    I guide AI the way I guide engineering teams: with context about secure
+    data flow, points of failure, performance ceilings, and the hundred
+    non-obvious tradeoffs that separate a demo from a product. Detailed
+    prompting isn't enough. You need a mind that's been there.
+
+  # Proof cards on the dark band
+  proof:
+    - name: AEM AI Agent — Admin Co-Pilot
+      description: >
+        OSGi tool with 10 specialized admin tools, 'Safe Omniscience' security
+        model, agentic orchestration loop with transparent reasoning. Works
+        with OpenAI, Azure, Groq, Ollama.
+    - name: AEM AI Translation Connector
+      description: >
+        Custom AEM 6.5 connector — JCR-based translation memory with fuzzy
+        matching, real-time cost tracking, wizard-driven projects, automated
+        scheduling.
+    - name: Alamo Voice AI — Car Rental Chatbot
+      description: >
+        Voice-first chatbot powered by Gemini Live API. Bidirectional native
+        audio plus 22 MCP tools spanning the full GMA reservation flow.
+        Embeddable as a single <script> tag on any page.
+
+# -----------------------------------------------------------------------------
+skills:
+  eyebrow: 03 — Skills & Stack
+  headline: 'The *toolkit*.'
+
+  groups:
+    - title: Architecture & Leadership
+      items:
+        - Solution Design
+        - Application Design
+        - Team Leadership
+        - Coaching & Training
+        - Stakeholder Management
+        - Cost-saving Proposals
+        - Requirements Analysis
+    - title: Languages
+      items: [Java, C#, JavaScript, TypeScript, HTML, SQL, HTL]
+    - title: Adobe Stack
+      items:
+        - AEM Sites 6.x / AEMaaCS
+        - AEMaaCS - Assets
+        - Dynamic Media OpenAPI
+        - Adobe Target
+        - Content Hub
+        - Cloud Manager
+        - Adobe Analytics
+        - Adobe Launch
+        - LiveCycle
+        - Acrobat / Reader
+    - title: AI & GenAI
+      items:
+        - Claude
+        - OpenAI APIs
+        - GPT
+        - Groq
+        - Ollama
+        - Gemini Live
+        - Agentic Orchestration
+        - RAG Patterns
+        - MCP
+    - title: Cloud & Infra
+      items:
+        - AWS Lambda
+        - Azure Functions
+        - Cosmos DB
+        - Azure Traffic Manager
+        - Akamai CDN
+        - Jenkins
+        - Virtuoso
+        - TFS / Git / Bitbucket
+    - title: Capture & Documents
+      items:
+        - Captiva Capture
+        - ImageTrust
+        - FormWare
+        - InputAccel
+        - Documentum
+        - FileNet
+        - eInput
+
+# -----------------------------------------------------------------------------
+experience:
+  eyebrow: 04 — Experience
+  headline: 'Where the *work* happened.'
+
+  jobs:
+    - company: Perficient
+      role: Senior Technical Architect
+      dates: Jan 2023 — Present
+      location: Remote (Broomfield, CO)
+      client: Enterprise Mobility (Alamo, National, Enterprise Rent-A-Car)
+      prior_role: Technical Architect (Nov 2021 — Jan 2023)
+      bullets:
+        - Architect & maintain CheeriOS — a centralized repository of reusable AEM features built with non-breaking release strategies for safe enterprise-wide adoption
+        - Lead integrations across AEM Assets as a Cloud Service, Dynamic Media via OpenAPI, Virtuoso (automated testing), and Rigor (performance monitoring)
+        - Drive Adobe Analytics & Target integrations, MSM-based AEM rollouts, and high-performance orchestration layers for SEO, caching, and reservation systems
+        - Spearhead RWS translation workflows, Content Fragments adoption, WAF + bot/spam filtering, and migration of legacy sites to a unified AEM architecture
+        - Built two production AI agents on AEM (Admin Co-Pilot + Translation Connector) — proving an engineering-first approach to GenAI on Adobe stacks
+        - Shipped Alamo Voice AI — a voice-first chatbot powered by Gemini Live API, with 22 MCP tools backing the full reservation flow
+
+    - company: Peraton (formerly Hewlett-Packard)
+      role: Technology Consultant
+      dates: 2010 — Nov 2021
+      location: Westminster, CO
+      client: County of San Diego, CDCR, multi-state
+      bullets:
+        - Held positions of increasing responsibility across 11+ years on enterprise capture, AEM, and cloud projects
+        - Pivotal architect on SOMS — a national-award-winning CDCR project digitizing 250M images of 50-year paper records via encrypted distributed-scanning pipelines
+        - Designed San Diego County's first Azure cloud implementation — emergency-alerts registration with multi-region traffic management
+        - Shipped the County's first AEM-based PWA — offline-capable medical reference for first responders with self-updating dynamic caching
+        - Reduced OES emergency-posting workflow from 30+ steps to 4, with multi-language + ASL (DeafLink) translation
+
+    - company: DFA — State of Arkansas
+      role: Senior Consultant
+      dates: Apr 2008 — May 2010
+      location: Little Rock, AR
+      bullets:
+        - Designed banking-check & document-processing solutions under strict daily SLAs for Treasury and bank deadlines
+        - Built 40+ image-and-data-capture workflows processing 200+ form types — checks, vouchers, A4, A11, Legal-size paper
+        - Integrated 50+ ImageScan Lockboxes with FormWare; introduced barcode strategies that reduced accounting errors and improved data extraction accuracy
+
+    - company: Hewlett-Packard
+      role: Captiva Consultant (EDS / Saber)
+      dates: Feb 2007 — Feb 2008
+      location: Salem, OR
+      bullets:
+        - Implemented HHSA Medicaid claims-processing InputAccel workflows for State of Oregon MMIS
+        - Built letter-generation flow inside the capture workflow to speed up correspondence delivery for the claims process
+
+# -----------------------------------------------------------------------------
+# Projects — known tags get colored accent bars: AI, Government, Cloud, Mobile,
+# Platform, Capture, Web. Add new tags freely; unknown tags get a neutral bar.
+#
+# Each project may include an optional `details` block (problem / approach /
+# outcome / highlights). When present, the modal shows full case-study text.
+# When absent, the modal shows a generic "available on request" fallback.
+# -----------------------------------------------------------------------------
+projects:
+  eyebrow: 05 — Selected Projects
+  headline: 'Selected work, **filterable**.'
+
+  items:
+    - name: Alamo Voice AI — Car Rental Chatbot
+      tag: AI
+      year: '2026'
+      stack: [Gemini Live API, Node.js, MCP, WebSocket, Spring Boot, Redis]
+      blurb: >
+        Voice-first AI assistant for Alamo Rent A Car powered by Gemini Live API.
+        Bidirectional native audio, 22 MCP tools spanning the full reservation
+        flow (search → book → extras → commit), real-time weather cards, and a
+        drop-in <script> embed.
+      details:
+        problem: >
+          Travelers want to book rental cars hands-free — during a commute,
+          while loading a car, while on the move. Alamo's existing flow needed
+          dozens of form fields and tab switches, none of which translated to
+          voice. Building a voice agent on top of decades of GBO reservation
+          APIs meant navigating a large surface area without breaking SLAs.
+        approach: >
+          Built a Node.js orchestrator that streams bidirectional audio with
+          Gemini Live API while a parallel MCP server exposes 22 reservation
+          tools to the model. Voice and text fallback share the same tool
+          layer. Rich UI cards (vehicle, weather, confirmation) render
+          alongside the conversation. The whole thing ships as a single
+          <script> embed that drops a floating launcher into any page.
+        outcome: >
+          A drop-in widget that handles the full booking flow end-to-end —
+          discovery, reservation start, car class selection, extras, renter
+          info, commit, cancellation. Real-time weather for destinations via
+          Open-Meteo. Brand-aligned, production-deployable on any Alamo
+          property.
+        highlights:
+          - 22+ MCP tools exposed to Gemini covering full GMA reservation surface
+          - Bidirectional native audio via gemini-2.5-flash-native-audio-latest
+          - Drop-in <script> embed creates a floating launcher with iframe overlay
+          - Weather cards via Open-Meteo, ACRISS-keyed vehicle imagery
+          - Heartbeat + reconnect on the WebSocket layer for resilient sessions
+
+    - name: AEM AI Agent — Admin Co-Pilot
+      tag: AI
+      year: '2026'
+      stack: [Java, OSGi, Sling, JCR, Coral UI]
+      blurb: >
+        AI-powered conversational agent embedded in AEM's Granite Shell.
+        Plugin-based tool registry with 10 specialized admin tools, 'Safe
+        Omniscience' security, encrypted API key storage. Works with OpenAI,
+        Azure, Groq, Ollama.
+      details:
+        problem: >
+          AEM's admin surface is broad and deeply contextual — finding the
+          right node, applying the right ACL, understanding why a workflow
+          stalled all require expert mental models. A conversational agent
+          could help, but most AI plugins ship as black boxes that either
+          over-permission ("admin god mode") or are too cautious to be useful.
+        approach: >
+          Built an OSGi-based agent inside AEM's Granite Shell with a
+          plugin-based tool registry — each capability is a separately
+          versioned OSGi component. Adopted a "Safe Omniscience" security
+          model: read anywhere, but writes are gated through an explicit
+          confirmation loop with diff previews. API keys for OpenAI / Azure /
+          Groq / Ollama are encrypted at rest in the JCR.
+        outcome: >
+          Authors and admins ask natural-language questions about content and
+          configuration. Every reasoning step is logged and visible; every
+          action requires explicit confirmation. Provider-agnostic so teams
+          can pick the LLM by cost, latency, or compliance need.
+        highlights:
+          - 10 specialized admin tools registered via OSGi service registry
+          - '"Safe Omniscience" model — read-anywhere, write-with-confirmation'
+          - Encrypted API key storage in JCR
+          - 'Provider-agnostic: OpenAI, Azure OpenAI, Groq, Ollama'
+          - Fully embedded in Granite Shell — no external service required
+
+    - name: AEM AI Translation Connector
+      tag: AI
+      year: '2025'
+      stack: [AEM 6.5, Java/OSGi, Sling Models, Maven]
+      blurb: >
+        Custom translation connector integrating OpenAI-compatible APIs into
+        AEM's native translation framework. JCR-based translation memory,
+        real-time cost tracking, wizard-driven projects.
+      details:
+        problem: >
+          AEM's native translation framework expects vendor connectors (RWS,
+          Smartling, etc.) with their own pricing and turnaround. For pages
+          with repeated terminology, sending every job out is wasteful — and
+          there was no native way to plug OpenAI-compatible LLMs into the same
+          wizard authors already know.
+        approach: >
+          Built a connector that hooks into AEM's existing translation
+          framework so authors keep the wizard-driven flow they're used to.
+          JCR stores a translation memory with fuzzy matching — repeated
+          phrases reuse prior translations and never re-incur API cost.
+          Real-time cost tracking surfaces per-job spend before commit.
+        outcome: >
+          Authors run translations against the same provider stack the AI
+          agent uses. Costs drop materially on glossary-heavy content thanks
+          to TM reuse. Scheduled runs let large catalogs translate overnight
+          without blocking day-to-day editing.
+        highlights:
+          - Native plug-in to AEM's translation framework (no parallel UI)
+          - JCR-stored translation memory with fuzzy match
+          - Real-time cost tracking per job and per provider
+          - Wizard-driven project setup
+          - Scheduled / batch translation runs
+
+    - name: CheeriOS — Reusable AEM Platform
+      tag: Platform
+      year: '2021–25'
+      stack: [AEM, OSGi, CI/CD]
+      blurb: >
+        Centralized repository of reusable features for Enterprise Mobility's
+        global brand sites. Non-breaking release strategy enables safe
+        enterprise-wide adoption.
+      details:
+        problem: >
+          Enterprise Mobility runs Alamo, National, and Enterprise Rent-A-Car
+          on AEM, plus regional and language variants. Each brand site needed
+          similar features — search, location pickers, rate widgets — but
+          rolling out a fix to one brand often broke another. Releases were a
+          coordination tax.
+        approach: >
+          Created a centralized repository of reusable AEM features with a
+          non-breaking release strategy: every change ships behind a versioned
+          contract, with deprecation paths and migration helpers. Brand teams
+          adopt at their own pace. The platform owns the contract; the brands
+          own the rollout timing.
+        outcome: >
+          A reusable library powering Enterprise Mobility's global brand
+          sites. Brands move at their own cadence, the platform team ships
+          continuously, and brand-specific bugs no longer cascade across the
+          organization. The patterns generalize to AEM Assets, Dynamic Media,
+          Adobe Target, and Analytics integrations.
+        highlights:
+          - Non-breaking release strategy across multi-brand AEM
+          - Adopted by Alamo, National, Enterprise Rent-A-Car
+          - Versioned contracts + deprecation paths instead of in-place edits
+          - Foundation for downstream Assets, DM, Target, Analytics work
+          - Scaled the platform team without scaling brand-coordination overhead
+
+    - name: AEM Sites — County of San Diego
+      tag: Government
+      year: '2021'
+      stack: [AEM 6.5, AWS, Akamai]
+      blurb: >
+        Designed AEM 6.3→6.5 upgrade and migration from on-prem to
+        Peraton-managed AWS. Built integrations with Documentum, SharePoint,
+        PowerApps, Accela, LiveCycle.
+      details:
+        problem: >
+          County of San Diego's AEM environment was on AEM 6.3, on-prem, and
+          tightly coupled to Documentum, SharePoint, PowerApps, Accela, and
+          LiveCycle. The 6.3 → 6.5 jump plus a parallel migration to
+          Peraton-managed AWS meant moving a heavily integrated production
+          system without disrupting services residents depend on.
+        approach: >
+          Sequenced the upgrade and the cloud migration so each integration
+          could be cut over independently — Documentum first, then Accela,
+          then LiveCycle, etc. Built shims at every integration boundary so
+          cutover windows could be measured in minutes, not hours. Akamai sat
+          in front for cache control and gradual traffic shifting.
+        outcome: >
+          AEM 6.5 in production on Peraton-managed AWS with all legacy
+          integrations intact. The integration-shim pattern is now reused for
+          downstream County AEM work. Set the baseline architecture for the
+          OES, EMS, and District Supervisor sites that followed.
+        highlights:
+          - AEM 6.3 → 6.5 upgrade + on-prem → AWS migration in one program
+          - Integration shims for Documentum, SharePoint, PowerApps, Accela, LiveCycle
+          - Akamai-fronted gradual traffic shifting
+          - Set the platform pattern reused by every subsequent County AEM project
+          - No meaningful citizen-facing downtime during cutovers
+
+    - name: District Supervisor Sites
+      tag: Government
+      year: '2021'
+      stack: [AEM, Editable Templates]
+      blurb: >
+        Implemented all five district supervisor sites with shared policies —
+        Font Awesome icons, content-fragment-driven news, board letter
+        components, custom email actions.
+      details:
+        problem: >
+          Each of the five County of San Diego District Supervisors needed an
+          independent web presence — their own news, their own board letters,
+          their own constituent communications — but the County wanted a
+          single editorial system, a shared design language, and one set of
+          components to maintain.
+        approach: >
+          Used AEM Editable Templates with shared policies so each supervisor
+          site looks tailored but inherits a single component library. Content
+          Fragments power the news sections so updates flow from one place.
+          Built custom email actions and board-letter components so supervisor
+          staff can publish without engineering involvement.
+        outcome: >
+          Five distinct supervisor sites running off one component set, with
+          each office self-serving their day-to-day content. Onboarding a new
+          supervisor becomes a clone-and-customize step, not a project.
+        highlights:
+          - Five district sites from one shared component library
+          - Editable Templates + shared policies for design consistency
+          - Content-fragment-driven news section
+          - Custom board-letter and email-action components
+          - Font Awesome icon system for non-engineering authors
+
+    - name: EMS Mobile (PWA)
+      tag: Mobile
+      year: '2021'
+      stack: [AEM Sites, Service Worker]
+      blurb: >
+        County's first Progressive Web App — offline-capable medical reference
+        for first responders with robust self-updating dynamic caching.
+      details:
+        problem: >
+          First responders need a medical reference at incidents. Cellular
+          service at fire scenes, rural calls, and underground sites is
+          unreliable. A native app meant fighting the App Store and forcing IT
+          to manage another platform.
+        approach: >
+          Built a Progressive Web App on AEM Sites with a robust service
+          worker that pre-caches the entire reference and self-updates when
+          network is available. The site degrades gracefully — when offline it
+          serves the last good cache; when online it freshens content silently
+          in the background.
+        outcome: >
+          County's first AEM-based PWA. Field responders pull up the reference
+          on any device, online or off. Updates from medical staff flow into
+          the cache the next time the device sees the network — no manual sync
+          step.
+        highlights:
+          - Service-worker pre-caching for full-offline operation
+          - Self-updating dynamic cache strategy
+          - First AEM-based PWA at the County
+          - Cross-platform (no App Store distribution headaches)
+          - Graceful online/offline transitions invisible to the responder
+
+    - name: OES Emergency Solutions
+      tag: Government
+      year: '2020'
+      stack: [AEM, Azure, Blackboard Connect]
+      blurb: >
+        Cut OES emergency-posting workflow from 30+ steps to 4. Multi-language
+        with ASL translation via DeafLink. First custom Azure cloud
+        implementation for the County.
+      details:
+        problem: >
+          County Office of Emergency Services posted alerts during wildfires
+          and other incidents through a 30+ step manual workflow that touched
+          multiple systems. During an active emergency that's exactly when you
+          can't afford 30 steps. ASL and multi-language coverage was patched
+          together case-by-case.
+        approach: >
+          Reduced the workflow to 4 steps end-to-end, with multi-language
+          translation built in and ASL provided through a DeafLink
+          integration. Designed and built the County's first custom Azure
+          cloud implementation behind the AEM front-end, providing the
+          resiliency and traffic-shaping the existing on-prem stack couldn't
+          deliver.
+        outcome: >
+          Active emergencies are posted in minutes, not the better part of an
+          hour. ASL and multi-language are first-class, not bolted on. The
+          Azure implementation pattern set the foundation for the later
+          Emergency Alerts Registration project.
+        highlights:
+          - 30+ step workflow → 4 steps
+          - First custom Azure cloud implementation at the County
+          - Multi-language + ASL (DeafLink) translation built in
+          - Blackboard Connect integration for outbound alert distribution
+          - Pattern reused across later County emergency-services tooling
+
+    - name: Bin Tracking
+      tag: Web
+      year: '2018'
+      stack: [Node.js, Angular, Spring Boot, JPA, WebLogic, SSRS]
+      blurb: >
+        End-to-end bin tracking between county departments — barcode scanning,
+        FedEx integration, PDF manifests, role-based admin.
+      details:
+        problem: >
+          County departments shipped physical bins of documents and evidence
+          to each other constantly, and tracking was on paper. When a bin was
+          lost, the trail went cold. Departments wanted a barcode-based
+          tracking system with audit history, role-based access, and FedEx
+          visibility.
+        approach: >
+          Built an end-to-end bin-tracking system: barcode scan at every hop,
+          role-based admin for departments to manage their own staff, FedEx
+          API integration for off-site shipments, and PDF manifests so a bin
+          always travels with a paper backup. JPA + Spring Boot on the back
+          end, Angular UI on the front end, SSRS for reporting.
+        outcome: >
+          A unified system that replaced ad-hoc spreadsheets and paper logs.
+          Lost-bin incidents became traceable rather than mysteries.
+          Department admins manage their own users without involving IT.
+        highlights:
+          - Barcode scanning at every hop
+          - FedEx API integration for off-site routing
+          - PDF manifest generation for paper backup
+          - Role-based admin per department
+          - SSRS reporting on bin lifecycle and SLA breaches
+
+    - name: Inspection Hub
+      tag: Mobile
+      year: '2011–18'
+      stack: [C#, LiveCycle, Accela, Documentum]
+      blurb: >
+        Tablet app for County inspectors — restaurants, pools, housing, air
+        quality. Offline-capable Accela sync. Adopted by AWM and APCD
+        departments.
+      details:
+        problem: >
+          County inspectors covering restaurants, pools, housing, and air
+          quality were carrying paper forms into the field, then re-keying
+          everything back at the office. Connectivity at inspection sites was
+          spotty. Different departments had different form sets.
+        approach: >
+          Built a tablet app that lets inspectors fill out the right form for
+          the right inspection type offline, then syncs back to Accela when
+          connectivity returns. LiveCycle handled dynamic form rendering.
+          Documentum stored evidence photos and signed PDFs. The architecture
+          was generalized so AWM (waste management) and APCD (air pollution
+          control) could adopt it after the initial rollout.
+        outcome: >
+          Inspectors spend more time inspecting and less time re-keying.
+          Adopted across multiple departments because the form layer was
+          abstracted from the workflow. Sustained for seven years and adapted
+          as Accela versions evolved.
+        highlights:
+          - Offline-capable Accela sync
+          - LiveCycle dynamic forms for per-inspection-type layouts
+          - Documentum-backed evidence storage
+          - Adopted by AWM and APCD after initial rollout
+          - Sustained across multiple Accela major versions
+
+    - name: Emergency Alerts Registration
+      tag: Cloud
+      year: '2018'
+      stack: [Azure Functions, Cosmos DB, AEM, Akamai, SendGrid]
+      blurb: >
+        Multi-region, traffic-managed registration for wildfire / earthquake
+        alerts. Cosmos→Blackboard Connect integration.
+      details:
+        problem: >
+          Wildfire and earthquake alerts depend on having current contact info
+          for residents. The old on-prem registration form couldn't handle the
+          load when residents rushed to register during an incident — exactly
+          when registration matters most.
+        approach: >
+          Designed a multi-region, traffic-managed Azure architecture using
+          Azure Functions and Cosmos DB so registration capacity scales
+          horizontally during incidents. The AEM front-end stays cached at
+          Akamai for instant page loads; SendGrid handles confirmation email;
+          Cosmos integrates with Blackboard Connect for outbound alert
+          distribution.
+        outcome: >
+          Registration capacity that scales to incident traffic. Residents
+          register fast even mid-incident. The architecture set the County's
+          pattern for resident-facing cloud services.
+        highlights:
+          - Multi-region Azure with Traffic Manager-based failover
+          - Azure Functions + Cosmos for horizontal scale-out
+          - Akamai-fronted AEM page caching
+          - SendGrid for transactional email
+          - Cosmos → Blackboard Connect for outbound alert distribution
+
+    - name: Time Accounting
+      tag: Web
+      year: '2018'
+      stack: [Spring Boot, LiveCycle, Accela REST]
+      blurb: >
+        Timesheet-style UX for county inspectors with full audit logging and
+        SSRS analytics.
+      details:
+        problem: >
+          County inspectors needed to log time against inspections for billing
+          and compliance. Existing tools were either generic timesheet apps
+          disconnected from inspection data or spreadsheets that broke audit.
+          Inspector time data needed to flow back into Accela for invoicing.
+        approach: >
+          Built a timesheet-style UX wired directly to Accela via REST so each
+          entry binds to a real inspection record. Spring Boot API on the back
+          end. Full audit logging — every edit, every supervisor approval,
+          every adjustment is captured. SSRS reports surface time breakdowns
+          for billing.
+        outcome: >
+          Inspectors log time without leaving the inspection workflow.
+          Auditors get a complete trail. Billing closes faster because Accela
+          has time data inline with the inspection record.
+        highlights:
+          - Timesheet UX bound to real inspection records via Accela REST
+          - Full edit / approval audit log
+          - SSRS analytics for billing breakdowns
+          - LiveCycle-rendered approval forms
+          - Eliminated parallel-spreadsheet workflow
+
+    - name: Capture Pipelines (CERMS, APIIS, P&C, LPU, ERMS)
+      tag: Capture
+      year: '2014–18'
+      stack: [Captiva, ImageTrust, Documentum, LiveCycle]
+      blurb: >
+        Two dedicated processing centers + distributed scanning via eInput,
+        later ImageTrust. SFTP transfer with retry, rights-management via
+        LiveCycle.
+      details:
+        problem: >
+          County of San Diego ingested mountains of paper from county
+          departments — court records, P&C documents, licensing — through two
+          dedicated processing centers. The original eInput-based distributed
+          scanning was reaching its capacity ceiling, and rights management on
+          sensitive documents was inconsistent across pipelines.
+        approach: >
+          Stood up five capture pipelines (CERMS, APIIS, P&C, LPU, ERMS) on
+          Captiva, with ImageTrust replacing eInput for distributed scanning
+          at field offices. SFTP transfer with retry handles unreliable
+          inter-site networks. LiveCycle applies rights management at ingest
+          so sensitive docs are protected the moment they enter the system.
+          Documentum is the system of record.
+        outcome: >
+          Five capture pipelines running concurrently, processing volume the
+          eInput-only architecture couldn't handle. Rights management is
+          automatic and consistent rather than per-pipeline custom logic. The
+          architecture pattern carried forward into later capture work.
+        highlights:
+          - Five concurrent capture pipelines (CERMS, APIIS, P&C, LPU, ERMS)
+          - Distributed scanning migrated from eInput to ImageTrust
+          - SFTP with retry across inter-site links
+          - LiveCycle rights management at ingest
+          - Documentum as system of record
+
+    - name: Enterprise Source Control
+      tag: Platform
+      year: '2016–17'
+      stack: [TFS, Git, VS, Eclipse]
+      blurb: >
+        Designed enterprise-wide source-control & release-management strategy.
+        Defined collections, folder structures, training and best practices
+        across teams.
+      details:
+        problem: >
+          Across a large enterprise, every team had their own source-control
+          habits. Branching strategies, repo layouts, release tagging — none
+          of it was consistent. Onboarding took weeks because the answer to
+          "where does my code go?" depended on which team you talked to.
+        approach: >
+          Designed an enterprise-wide source-control and release-management
+          strategy: standardized TFS collections and Git repo layouts, defined
+          branching and release-tagging conventions, and produced training
+          materials and best-practice guides. Worked alongside each team
+          during adoption rather than mandating from outside.
+        outcome: >
+          One consistent source-control answer across the enterprise.
+          Onboarding time drops because new engineers find their bearings on
+          day one. Release management becomes predictable because tag
+          conventions and branch expectations are shared.
+        highlights:
+          - Standardized TFS collections and Git repo layouts
+          - Defined branching + release-tagging conventions
+          - Training materials and best-practice guides
+          - Hands-on adoption with each team
+          - Both VS and Eclipse tooling supported
+
+    - name: SOMS — Strategic Offender Mgmt
+      tag: Government
+      year: '2010–15'
+      stack: [InputAccel, eInput, C#, GPG, Documentum]
+      blurb: >
+        National-award-winning CDCR project. Migrated 50 years of paper +
+        microfiche — 250M images — through encrypted backfile and distributed
+        scanning pipelines.
+      details:
+        problem: >
+          California Department of Corrections and Rehabilitation (CDCR) had
+          50 years of inmate records on paper and microfiche — 250 million
+          images — that needed to come online to support the SOMS strategic
+          offender management initiative. The data was sensitive (PII,
+          medical, legal) and had to be encrypted end-to-end. Scanning had to
+          happen at distributed prison sites with limited connectivity.
+        approach: >
+          Designed a distributed scanning architecture using eInput at prison
+          sites with InputAccel orchestrating ingest at the central processing
+          center. GPG encryption in transit. Backfile pipelines ran in
+          parallel so 50 years of records could be processed within a finite
+          project window. Documentum stored the digitized records.
+        outcome: >
+          250 million images digitized and online — the foundation of the SOMS
+          system. The project won a national award for the scope and
+          complexity of the records modernization. Set my pattern for
+          designing distributed-capture architectures that I reused on later
+          County of San Diego work.
+        highlights:
+          - 250M images migrated from paper and microfiche
+          - Distributed scanning at multiple prison sites via eInput
+          - GPG encryption end-to-end (sensitive PII / medical / legal)
+          - Parallel backfile pipelines to fit a 50-year archive into project timeline
+          - National-award-winning records modernization
+
+    - name: DFA Cash Control Workflows
+      tag: Capture
+      year: '2008–10'
+      stack: [FormWare, IBML, .NET, SQL]
+      blurb: >
+        40+ image/data capture workflows processing 200+ form types daily —
+        under strict SLA pressure to meet bank deposit timelines.
+      details:
+        problem: >
+          Arkansas Department of Finance and Administration processed banking
+          checks and tax forms under hard daily SLAs — Treasury and partner
+          banks had cutoff times that didn't move. Late deliveries had real
+          financial consequences. The form set was wide: A4, A11, Legal-size,
+          vouchers, checks.
+        approach: >
+          Built 40+ image-and-data-capture workflows in FormWare, integrated
+          with 50+ ImageScan Lockboxes feeding from the bank side. Introduced
+          barcode strategies on inserted forms so OCR doesn't have to guess at
+          layout. The .NET layer orchestrated workflow handoffs and persisted
+          to SQL.
+        outcome: >
+          200+ form types processed daily within Treasury's cutoff windows.
+          Barcode-driven layouts cut accounting errors and accelerated
+          extraction. The system kept pace as new form types and Treasury
+          rules came online.
+        highlights:
+          - 40+ image-and-data-capture workflows in FormWare
+          - 50+ ImageScan Lockboxes integrated
+          - Barcode strategies for unambiguous form layout detection
+          - 200+ form types processed under daily SLA
+          - Reduced accounting errors and improved extraction accuracy
+
+    - name: Oregon MMIS Medicaid Capture
+      tag: Capture
+      year: '2007–08'
+      stack: [FormWare, InputAccel, Oracle, .NET]
+      blurb: >
+        Image capture and data extraction for CMS 1500, UB92, ADA, DMAP, OFDM
+        forms. Inscript2-based hand/print recognition for cover-sheet
+        correspondence.
+      details:
+        problem: >
+          State of Oregon's MMIS Medicaid claims processing handled CMS 1500,
+          UB92, ADA, DMAP, and OFDM forms — each with their own quirks,
+          hand-printed sections, and provider-specific variations. Cover-sheet
+          correspondence had to be associated with the right claim packet
+          automatically.
+        approach: >
+          Implemented HHSA Medicaid claims-processing workflows on InputAccel
+          with FormWare for the form-recognition layer. Used Inscript2-based
+          hand/print recognition for variable cover-sheet content. Built a
+          letter-generation flow inside the capture workflow itself so
+          correspondence routing didn't require a separate downstream system.
+        outcome: >
+          Claims and correspondence flow through one consolidated capture
+          pipeline. Letter generation happens in-line, accelerating
+          correspondence delivery. Form-specific recognition keeps accuracy
+          stable across the diverse MMIS form set.
+        highlights:
+          - CMS 1500, UB92, ADA, DMAP, OFDM forms supported
+          - Inscript2 hand/print recognition for cover-sheet correspondence
+          - In-workflow letter generation (no downstream system needed)
+          - Oracle backend for MMIS persistence
+          - InputAccel-orchestrated end-to-end capture pipeline
+
+# -----------------------------------------------------------------------------
+education:
+  eyebrow: 06 — Education
+  headline: 'Where it *started*.'
+
+  schools:
+    - { school: Syracuse University,        degree: 'Masters, Computer Science',                     location: 'Syracuse, NY',     dates: '2005 — 2006' }
+    - { school: R.M.K Engineering College,  degree: "Bachelor's, Computer Science",                  location: 'Chennai, India',   dates: '2001 — 2004' }
+    - { school: Free Code Camp,             degree: 'Full Stack Web Development Certification',     location: 'Online',           dates: '2016 — 2017' }
+
+# -----------------------------------------------------------------------------
+certifications:
+  eyebrow: 06b — Certifications
+  headline: 'Credentialed.'
+
+  items:
+    - { name: 'Adobe AEM 6 Business Practitioner',                       issuer: Adobe,       year: 'Sep 2025' }
+    - { name: 'Architecting Applications for the Real World in .NET',    issuer: Pluralsight, year: ''         }
+    - { name: 'Web Developer Bootcamp',                                  issuer: Udemy,       year: 'Feb 2016' }
+    - { name: 'CompTIA CDIA',                                            issuer: CompTIA,     year: 'Sep 2012' }
+    - { name: 'Shaping up with Angular.js',                              issuer: Code School, year: ''         }
+
+# -----------------------------------------------------------------------------
+testimonials:
+  eyebrow: 07 — Testimonials
+  headline: 'What **people** say.'
+
+  items:
+    - quote: >
+        I have been working with Waseem for more than 8 years in multiple
+        projects. He is very technical savvy. Waseem is accountable — willing
+        to work over time to meet the deadline, a good team worker, very
+        approachable and willing to share. Sometimes I described problems to
+        Waseem and with the brain storming together, I was able to find
+        solutions for those issues.
+      who: Anthony Lee
+      role: Adobe AEM Forms Consultant · worked with Waseem on the same team
+
+    - quote: >
+        Waseem is an accomplished consultant. He brings great development
+        experience to any project he is a part of to deliver solutions with
+        the customer in mind. He is not afraid to roll up his sleeves to make
+        sure the job is done right. He brings a work ethic and positivity to
+        a team which elevates those around him.
+      who: Matt Ellstrom
+      role: Executive Leader · managed Waseem directly
+
+    - quote: >
+        Waseem is very talented and frequently finds unique and innovative
+        ways to solve complex problems. He is the go-to person on any project
+        he works on and is an excellent addition to any team. His dedication
+        has helped to bring in several complex projects.
+      who: Daryle Zimbelman
+      role: Project Manager, DXC Technology · was Waseem's mentor
+
+# -----------------------------------------------------------------------------
+contact:
+  eyebrow: 08 — Contact
+  headline: "Let's **connect**."
+  sub: >
+    Open to conversations about systems design, AI-assisted engineering,
+    and interesting technical challenges. Reach out — I'll reply soon.
+
+  primary_cta_label:   'Send a message →'
+  secondary_cta_label: 'LinkedIn ↗'
+
+  # When the user clicks "Send", the form posts to this endpoint.
+  # Leave EMPTY ("") for demo mode (simulates send + shows success state).
+  # Recommended providers: Formspree, Web3Forms, Resend, your own API.
+  #   Example Formspree: https://formspree.io/f/xxxxxxxx
+  form_endpoint: 'https://formspree.io/f/mzdozjgk'
+
+  modal:
+    title: 'Get in touch.'
+    intro: >
+      No email harvesting — drop a line below and I'll reply soon.
+      Routed to me directly; nothing is published or shared.
+    success_title: 'Thanks — I got it.'
+    success_intro: >
+      I'll reply to the address you provided soon. If it's urgent,
+      ping me on LinkedIn too.
