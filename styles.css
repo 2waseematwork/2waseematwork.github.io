@@ -825,6 +825,11 @@ img.px-avatar-face { object-fit: cover; border-radius: 50%; }
   opacity: 1;
   transform: translateX(0);
 }
+@container px (max-width: 760px) {
+  .px-pcard::before { transform: scaleX(1); }
+  .px-pcard-cta { opacity: 1; transform: none; }
+  .px-pcard:active { transform: scale(0.97); box-shadow: 0 4px 14px rgba(20,17,14,.1); }
+}
 
 /* =============================================================================
    MODAL (project detail + contact form)
