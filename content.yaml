@@ -54,8 +54,8 @@ hero:
     that ships them.
 
   sub: >
-    Senior Technical Architect · {years}+ years across Adobe Experience Manager,
-    Azure, AWS, and the legacy stacks where AI needs an experienced hand. Based in Thornton, Colorado.
+    Senior Technical Architect · {years}+ years across Adobe Experience Manager and Cloud (Azure/AWS),
+    Specializing in bringing AI to legacy stacks that require an experienced hand. Based in Thornton, Colorado.
 
   primary_cta:   { label: 'See selected work', href: '#projects' }
   secondary_cta: { label: 'LinkedIn ↗',        href: 'https://www.linkedin.com/in/linkwaseem' }
